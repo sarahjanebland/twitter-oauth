@@ -19,5 +19,5 @@ gem 'oauth'
 
 group :test do
   gem 'faker'
-  gem 'rspec'
+  gem 'rspec', :require => 'rspec/core/rake_task'
 end
