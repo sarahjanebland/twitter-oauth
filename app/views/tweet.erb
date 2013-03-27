@@ -1,0 +1,25 @@
+
+<h1>Make some tweets, yo!</h1>
+<span class='msg-place'></span>
+<form id='send_tweet' action='/tweet' method='post'>
+  <input type='text' name='tweet_content' />
+  <input type='submit' value="Ship it!" class="tweet-btn"/>
+</form>
+</div>
+
+
+<h1>Give us a username, yo!</h1>
+<form id='send_tweet' action='/user' method='post'>
+  <input type='text' name='username' />
+  <input type='submit' value="Get it!" class="grab-tweet-btn" />
+</form>
+</div>
+
+<% if @tweets == [] %>
+  Username no good. Please try some more names.
+<% end %>
+<ul>
+<% @tweets.each do |tweet| %>
+  <li><%= tweet.text %></li>
+<% end %>
+</ul>
